@@ -1,3 +1,3 @@
 # TpValidationAcquisJee
 
-Je me suis trompé, j'ai push dans la branch master et non main.
+Chaque exercice est disponible dans une branch lié à son nom.
