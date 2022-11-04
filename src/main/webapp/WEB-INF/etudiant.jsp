@@ -5,13 +5,24 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
+        <style>
+            ol { 
+                counter-reset: item;
+                list-style-type: none;
+            }
+            li { display: block; }
+            li:before { 
+                content: counter(item) "  "; 
+                counter-increment: item 
+            }
+        </style>
     </head>
     <body>
         <!--h1>Bienvenue</h1-->
-        <p>
+        <ol>
             <c:forEach items="${ etudiantList }" var="etudiant">
-                <c:out value="-   nom ${ etudiant.getNom() } id ${ etudiant.getId() } ${ etudiant.getMoyenne() }" /><br/>
+                <li><c:out value="nom ${ etudiant.getNom() } id ${ etudiant.getId() } ${ etudiant.getMoyenne() }" /></li>
             </c:forEach>
-        </p>
+        </ol>
     </body>
 </html>
